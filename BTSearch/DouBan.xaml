@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="BTSearch.DouBan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BTSearch"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:BTSearch.Models"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:DataType="data:DouBanSubject" x:Key="DouBanDataTemplate">
+            <local:DouBanTemplate HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Name="sp_status" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Name="tb_status" Text="" FontSize="22" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Button Name="btn_reload" Margin="0,10,0,0" Content="重新加载" Background="Transparent" Click="btn_reload_Click" />
+        </StackPanel>
+        <ProgressRing Name="pb_loading" IsActive="True" Height="50" Width="50" Visibility="Visible"/>
+        <ScrollViewer Name="myScrollViewer" Visibility="Collapsed">
+            <GridView Name="DouBanGridView"
+                  IsItemClickEnabled="True"
+                  ItemClick="DouBanGridView_ItemClick"
+                  ItemTemplate="{StaticResource DouBanDataTemplate}"
+                 />
+        </ScrollViewer>
+    </Grid>
+</Page>
