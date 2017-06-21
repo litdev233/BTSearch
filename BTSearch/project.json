@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "AdDuplexWin10": "10.1.1.1",
     "HtmlAgilityPack": "1.4.9.4",
     "MetroRate": "1.0.3",
     "Microsoft.Net.Http": "2.2.29",

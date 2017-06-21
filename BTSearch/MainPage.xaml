@@ -5,6 +5,7 @@
     xmlns:local="using:BTSearch"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ad="using:AdDuplex"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -14,6 +15,12 @@
         </Grid.RowDefinitions>
 
         <RelativePanel>
+            <ad:AdControl x:Name="adDuplexAd"
+                          AdUnitId="206879"
+                          IsTest="False"
+                          AppKey="0f4d0eb2-c093-4cad-9f33-dd9f11647463"
+                          RelativePanel.RightOf="btn_ham"
+                          RelativePanel.LeftOf="txt_word"/>            
             <Button Name="btn_ham" RelativePanel.AlignLeftWithPanel="True" FontFamily="Segoe MDL2 Assets" FontSize="24" Width="45" Height="45" Content="&#xE700;" Click="btn_ham_Click" />
             <Button Name="btn_search" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center" RelativePanel.AlignRightWithPanel="True" FontFamily="Segoe MDL2 Assets" FontSize="24" Background="Transparent" Content="&#xE1A3;" Click="btn_search_Click" />
             <TextBox Name="txt_word" MinWidth="200" PlaceholderText="搜点什么"  RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.LeftOf="cb_source" />
