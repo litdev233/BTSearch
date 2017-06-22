@@ -107,6 +107,9 @@
     <Compile Include="NotifyPopup.xaml.cs">
       <DependentUpon>NotifyPopup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewTemplate\BTFilesTemplate.xaml.cs">
+      <DependentUpon>BTFilesTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewTemplate\DouBanTemplate.xaml.cs">
       <DependentUpon>DouBanTemplate.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NotifyPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewTemplate\BTFilesTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

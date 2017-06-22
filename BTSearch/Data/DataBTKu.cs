@@ -44,7 +44,7 @@ namespace BTSearch.Data
                     {
                         if (file.InnerText == "....") continue;
                         Models.BTFile bt_file = new Models.BTFile();
-                        bt_file.file_icon = "Assets/" + file.ChildNodes[1].Attributes["class"].Value.Replace("fa ", "") +".png";
+                        bt_file.file_icon = "/Assets/" + file.ChildNodes[1].Attributes["class"].Value.Replace("fa ", "") +".png";
                         bt_file.file_title = file.ChildNodes[2].InnerText.Replace("\n", "");
                         bt_file.file_size = file.ChildNodes[3].InnerText;
                         bt_file_list.Add(bt_file);
