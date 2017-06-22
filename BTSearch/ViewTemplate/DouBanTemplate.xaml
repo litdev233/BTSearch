@@ -22,7 +22,7 @@
                              StarForegroundColor="#FFAC2D" 
                              StarOutlineColor="#DADADA" 
                              BackgroundColor="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
-            <TextBlock Text="{x:Bind DouBanSubject.rate_int}" FontSize="12"/>
+            <TextBlock Text="{x:Bind DouBanSubject.rate}" FontSize="12"/>
         </StackPanel>
 
     </StackPanel>
