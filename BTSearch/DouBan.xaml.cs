@@ -87,5 +87,26 @@ namespace BTSearch
         {
             LoadData();
         }
+
+
+        //文本长按弹出按钮
+        //private void CopyGameTitle_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var fe = sender as FrameworkElement;
+        //    var game = (Models.Game)fe.DataContext;
+        //    DataPackage dp = new DataPackage();
+        //    dp.SetText(game.title);
+        //    Clipboard.SetContent(dp);
+        //    NotifyPopup notifyPopup = new NotifyPopup(" 游戏名称已复制 ");
+        //    notifyPopup.Show();
+        //}
+
+        //private void GameTitle_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        //{
+        //    var fe = sender as FrameworkElement;
+        //    var menu = Flyout.GetAttachedFlyout(fe);
+        //    menu.ShowAt(fe);
+        //}
+
     }
 }

@@ -54,17 +54,31 @@ namespace BTSearch
 
         private void lb_menu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //var temp_select_index = lb_menu.SelectedIndex;
+            lb_setting.SelectedIndex = -1;
+            //lb_menu.SelectedIndex = temp_select_index;
+
             if (lbi_home.IsSelected)
             {
                 myFrame.Navigate(typeof(DouBan));
                 lbi_home.IsSelected = true;
                 HideBarBack();
             }
-            else if (lbi_about.IsSelected)
+            
+        }
+
+        private void lb_setting_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //var temp_select_index = lb_setting.SelectedIndex;
+            lb_menu.SelectedIndex = -1;
+            //lb_setting.SelectedIndex = temp_select_index;
+
+            if (lbi_about.IsSelected)
             {
                 ShowMessageBox();
             }
         }
+
 
         private void btn_search_Click(object sender, RoutedEventArgs e)
         {
@@ -121,5 +135,7 @@ namespace BTSearch
         {
             Search();
         }
+
+        
     }
 }
