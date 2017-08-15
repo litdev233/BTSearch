@@ -53,10 +53,10 @@ namespace BTSearch
             switch (cb_source.SelectedIndex)
             {
                 case 0:
-                    data = await Data.DataBTKu.GetData(tb_search.Text);
+                    data = await Data.DataCiLi.GetData(tb_search.Text);
                     break;
                 case 1:
-                    data = await Data.DataBTDB.GetData(tb_search.Text);
+                    data = await Data.DataBTKu.GetData(tb_search.Text);
                     break;
                 default:
                     break;

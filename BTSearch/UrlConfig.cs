@@ -26,5 +26,10 @@ namespace BTSearch
         /// </summary>
         public static readonly string APIBTKu = "http://btku5.com/q/{0}/{1}?sort=_score";
 
+        /// <summary>
+        /// 磁力吧的搜索地址
+        /// </summary>
+        public static readonly string APIBTCiLi = "http://ciliba.net/word/{0}_{1}.html";
+
     }
 }

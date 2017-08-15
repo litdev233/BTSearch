@@ -5,7 +5,6 @@
     xmlns:local="using:BTSearch"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ad="using:AdDuplex"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -15,16 +14,9 @@
         </Grid.RowDefinitions>
 
         <RelativePanel>
-            <ad:AdControl x:Name="adDuplexAd"
-                          AdUnitId="206879"
-                          IsTest="False"
-                          MaxHeight="45"
-                          AppKey="0f4d0eb2-c093-4cad-9f33-dd9f11647463"
-                          RelativePanel.RightOf="btn_ham"
-                          RelativePanel.LeftOf="txt_word"/>
             <Button Name="btn_ham" RelativePanel.AlignLeftWithPanel="True" FontFamily="Segoe MDL2 Assets" FontSize="24" Width="45" Height="45" Content="&#xE700;" Click="btn_ham_Click" />
             <Button Name="btn_search" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center" RelativePanel.AlignRightWithPanel="True" FontFamily="Segoe MDL2 Assets" FontSize="24" Background="Transparent" Content="&#xE1A3;" Click="btn_search_Click" />
-            <TextBox Name="txt_word" MinWidth="200" PlaceholderText="搜点什么"  RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.LeftOf="cb_source" />
+            <TextBox Name="txt_word" KeyUp="txt_word_KeyUp" MinWidth="200" PlaceholderText="搜点什么"  RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.LeftOf="cb_source" />
             <ComboBox Name="cb_source" SelectionChanged="cb_source_SelectionChanged" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.LeftOf="btn_search">
                 <ComboBoxItem Content="源1 " IsSelected="True" />
                 <ComboBoxItem Content="源2 " />
@@ -42,7 +34,7 @@
                             </StackPanel>
                         </ListBoxItem>
                     </ListBox>
-                    <ListBox Name="lb_setting" SelectionMode="Single" SelectionChanged="lb_setting_SelectionChanged" RelativePanel.AlignBottomWithPanel="True">
+                    <ListBox Name="lb_setting" Visibility="Collapsed" SelectionMode="Single" SelectionChanged="lb_setting_SelectionChanged" RelativePanel.AlignBottomWithPanel="True">
                         <ListBoxItem Name="lbi_about">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock  FontFamily="Segoe MDL2 Assets" FontSize="24" Text="&#xE783;"  />

@@ -136,6 +136,15 @@ namespace BTSearch
             Search();
         }
 
-        
+        private void txt_word_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_word.Text))
+            {
+                NotifyPopup notifyPopup = new NotifyPopup(" 搜 点 啥 ? ");
+                notifyPopup.Show();
+            }
+            else
+                Search();
+        }
     }
 }

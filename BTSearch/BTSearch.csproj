@@ -17,7 +17,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>BTSearch_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="Data\DataBTDB.cs" />
     <Compile Include="Data\DataBTKu.cs" />
+    <Compile Include="Data\DataCiLi.cs" />
     <Compile Include="Data\DataDouBan.cs" />
     <Compile Include="DouBan.xaml.cs">
       <DependentUpon>DouBan.xaml</DependentUpon>
